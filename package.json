@@ -1,0 +1,15 @@
+{
+  "name": "hotel-booking",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n cms,frontend -c blue,green \"npm run dev --prefix cms\" \"npm run dev --prefix frontend -- -p 3001\"",
+    "dev:cms": "npm run dev --prefix cms",
+    "dev:frontend": "npm run dev --prefix frontend -- -p 3001",
+    "build": "npm run build --prefix cms && npm run build --prefix frontend",
+    "build:cms": "npm run build --prefix cms",
+    "build:frontend": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

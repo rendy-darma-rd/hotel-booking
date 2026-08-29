@@ -12,6 +12,21 @@ frontend where guests browse room types and pay online to book.
 - `frontend/` — Next.js + TypeScript public site. Guests browse room types and book
   with Midtrans Snap (supports GoPay, OVO, DANA, QRIS, bank transfer/VA, and cards).
 
+`cms/` and `frontend/` are independent apps, each with their own `package.json` —
+there's no npm workspaces setup, so `npm install` must be run in each one
+separately (see steps below). The root `package.json` only holds convenience
+scripts that delegate into both:
+
+```bash
+npm run dev             # both apps at once (cms on :3000, frontend on :3001)
+npm run dev:cms         # just the CMS
+npm run dev:frontend    # just the frontend
+
+npm run build           # production build for both
+npm run build:cms
+npm run build:frontend
+```
+
 ## How booking works
 
 - The hotel has one or more **room types** (e.g. Deluxe, Suite), each with many
