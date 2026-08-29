@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { href: '/room-types', label: 'Room Types' },
   { href: '/rooms', label: 'Rooms' },
   { href: '/bookings', label: 'Bookings' },
+  { href: '/settings', label: 'Settings' },
 ];
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
