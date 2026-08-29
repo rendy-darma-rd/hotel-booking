@@ -31,7 +31,10 @@ export default async function DashboardLayout({ children }: { children: React.Re
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-500">{user?.email}</span>
             <form action={signOut}>
-              <button type="submit" className="text-sm text-gray-600 hover:text-gray-900">
+              <button
+                type="submit"
+                className="cursor-pointer text-sm text-gray-600 hover:text-gray-900"
+              >
                 Sign out
               </button>
             </form>

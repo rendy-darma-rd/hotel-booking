@@ -55,7 +55,7 @@ export default async function RoomTypesPage() {
                     </Link>
                     <form action={deleteRoomType}>
                       <input type="hidden" name="id" value={rt.id} />
-                      <button type="submit" className="text-red-600 hover:text-red-800">
+                      <button type="submit" className="cursor-pointer text-red-600 hover:text-red-800">
                         Delete
                       </button>
                     </form>
